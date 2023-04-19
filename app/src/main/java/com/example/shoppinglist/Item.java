@@ -5,11 +5,13 @@ public class Item {
     private String name;
     private String description;
     private long time;
+    private boolean superImportant;
 
-    public Item(String name, String description) {
+    public Item(String name, String description, boolean superImportant) {
         this.name = name;
         this.description = description;
         this.time = System.currentTimeMillis();
+        this.superImportant = superImportant;
     }
 
     public String getName() {
@@ -22,6 +24,11 @@ public class Item {
 
     public long getTime() {
         return time;
+    }
+
+
+    public boolean checkIfSuperImportant() {
+        return superImportant;
     }
 
 }

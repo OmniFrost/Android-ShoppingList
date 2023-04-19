@@ -4,13 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
+
 
 public class AddActivity extends AppCompatActivity {
 
 
     private Storage cart;
-
+    private CheckBox chbSupImp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,7 @@ public class AddActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add);
 
         cart = Storage.getInstance();
+        chbSupImp = findViewById(R.id.chbSupImp);
     }
 
     public void clickFinal(View view) {
@@ -25,7 +28,10 @@ public class AddActivity extends AppCompatActivity {
         EditText txtDescription = findViewById(R.id.txtDescription);
         String itemName = txtItemName.getText().toString();
         String itemDescription = txtDescription.getText().toString();
-        Item item = new Item(itemName, itemDescription);
+
+        boolean checkImportance = chbSupImp.isChecked();
+        Item item = new Item(itemName, itemDescription, checkImportance);
+
         cart.addItem(item);
 
     }

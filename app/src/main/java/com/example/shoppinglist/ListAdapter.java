@@ -63,7 +63,7 @@ public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
                 editedItemName = holder.txtEditName.getText().toString();
                 editedItemDescription = holder.txtEditDescription.getText().toString();
 
-                editedItem = new Item(editedItemName, editedItemDescription);
+                editedItem = new Item(editedItemName, editedItemDescription, cart.get(position).checkIfSuperImportant());
                 cart.set(position, editedItem);
                 notifyDataSetChanged();
 
