@@ -1,5 +1,6 @@
 package com.example.shoppinglist;
 
+import android.app.Notification;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class ViewHolder extends RecyclerView.ViewHolder {
+    public ImageView starimg;
     TextView txtPlaceHolderItemName, txtPlaceHolderDescription;
     EditText txtEditName, txtEditDescription;
     ImageView iwDelete, iwEdit;
@@ -23,6 +25,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         txtPlaceHolderDescription = itemView.findViewById(R.id.txtPlaceHolderDescription);
         iwDelete = itemView.findViewById(R.id.baseline_delete_forever_24);
         iwEdit = itemView.findViewById(R.id.baseline_edit_24);
+        starimg = itemView.findViewById(R.id.starimg);
 
         txtEditName = itemView.findViewById(R.id.txtEditName);
         txtEditDescription = itemView.findViewById(R.id.txtEditDescription);

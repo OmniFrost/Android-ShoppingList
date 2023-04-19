@@ -30,6 +30,12 @@
             android:text="Description"
             android:textSize="20sp" />
 
+        <ImageView
+            android:id="@+id/starimg"
+            android:layout_width="75dp"
+            android:layout_height="65dp"
+            android:src="@drawable/baseline_star_24" />
+
     </LinearLayout>
 
     <LinearLayout

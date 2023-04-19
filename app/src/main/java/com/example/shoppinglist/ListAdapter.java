@@ -46,6 +46,12 @@ public class ListAdapter extends RecyclerView.Adapter<ViewHolder> {
 
 
 
+        if (cart.get(position).checkIfSuperImportant()) {
+            holder.starimg.setVisibility(View.VISIBLE);
+        } else {
+            holder.starimg.setVisibility(View.GONE);
+        }
+
         holder.iwDelete.setOnClickListener(view -> {
             currpos = holder.getAdapterPosition();
             cart.remove(currpos);
